@@ -1,0 +1,16 @@
+{
+    "actionOnStepFail": "stop", 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "f99448e6-5996-4aa5-a491-7d05a59d7217", 
+    "isBlueprint": true, 
+    "key": "performverifyifwslisinstalled", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "verifywslisinstalled"
+        }
+    ], 
+    "name": "Perform Verify if WSL is Installed", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

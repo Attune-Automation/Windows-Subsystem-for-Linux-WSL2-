@@ -60,6 +60,9 @@ WSL2 is supported on Windows Desktop 10 and Windows Server 2022.
 
 This blueprint will check for the Windows operating system version and will install Debian on these versions.
 
+### Perform Verify if WSL is Installed
+
+
 
 
 
@@ -68,8 +71,8 @@ This blueprint will check for the Windows operating system version and will inst
 
 | Name | Type | Script Reference | Comment |
 | ---- | ---- | ---------------- | ------- |
-| Automation Worker Windows User: Administrator | Windows Credential | `automationworkerwindowsuseradministrator` | Administrator user on the Windows Automation Worker node. |
 | Automation Worker Windows Node | Windows Node | `automationworkerwindowsnode` | The Windows automation worker node used to perform tasks to create the ISO. |
+| Automation Worker Windows User: Administrator | Windows Credential | `automationworkerwindowsuseradministrator` | Administrator user on the Windows Automation Worker node. |
 
 
 
