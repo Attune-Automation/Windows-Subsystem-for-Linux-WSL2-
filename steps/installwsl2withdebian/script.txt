@@ -1,0 +1,31 @@
+$WIN10_STRING = "Windows 10"
+$WIN2016_STRING = "Windows Server 2016"
+$WIN2019_STRING = "Windows Server 2019"
+$WIN2022_STRING = "Windows Server 2022"
+
+$ERROR_STRING = "Please use Windows Desktop 10 or Windows Server 2022 for WSL2."
+
+$LINUX_DISTRIBUTION = "Debian"
+
+if ((systeminfo | select-string -pattern $WIN10_STRING)) {
+    # Win10
+    Write-Host "On ${WIN10_STRING}"
+    wsl --install -d "${LINUX_DISTRIBUTION}"
+    
+} elseif ((systeminfo | select-string -pattern $WIN2016_STRING)) {
+    # Win2016
+    Write-Host "On ${WIN2016_STRING}"
+    Write-Host "$ERROR_STRING"
+    exit 1
+    
+} elseif ((systeminfo | select-string -pattern $WIN2019_STRING)) {
+    # Win2019
+    Write-Host "On ${WIN2019_STRING}"
+    Write-Host "$ERROR_STRING"
+    exit 1
+
+} elseif ((systeminfo | select-string -pattern $WIN2022_STRING)) {
+    # Win2022
+    Write-Host "On ${WIN2022_STRING}"
+    wsl --install -d "${LINUX_DISTRIBUTION}"
+}

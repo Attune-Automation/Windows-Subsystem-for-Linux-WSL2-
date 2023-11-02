@@ -1,0 +1,24 @@
+{
+    "actionOnStepFail": "stop", 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "44787e45-a9cb-4c72-ab11-77e7dec34f2d", 
+    "isBlueprint": true, 
+    "key": "setupwindowssubsystemforlinuxwsl2", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "installwsl2withdebian"
+        }, 
+        {
+            "order": 50, 
+            "stepKey": "winrebootlink"
+        }, 
+        {
+            "order": 100, 
+            "stepKey": "verifywslisinstalled"
+        }
+    ], 
+    "name": "Setup Windows Subsystem for Linux (WSL2)", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

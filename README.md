@@ -54,6 +54,9 @@ This Project contains the following Blueprints.
 
 
 
+### Setup Windows Subsystem for Linux (WSL2)
+
+
 
 
 
@@ -62,6 +65,8 @@ This Project contains the following Blueprints.
 
 | Name | Type | Script Reference | Comment |
 | ---- | ---- | ---------------- | ------- |
+| Automation Worker Windows User: Administrator | Windows Credential | `automationworkerwindowsuseradministrator` | Administrator user on the Windows Automation Worker node. |
+| Automation Worker Windows Node | Windows Node | `automationworkerwindowsnode` | The Windows automation worker node used to perform tasks to create the ISO. |
 
 
 
