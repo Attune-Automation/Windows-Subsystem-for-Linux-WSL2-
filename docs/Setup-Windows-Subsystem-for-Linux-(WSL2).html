@@ -458,6 +458,13 @@ if ((systeminfo | select-string -pattern $WIN10_STRING)) {
                         </h3>
                     </div>
 
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
 
 
 
@@ -508,6 +515,13 @@ if ((systeminfo | select-string -pattern $WIN10_STRING)) {
             <pre>
                 <code class="language-sql py-0">
 wsl --list
+
+if (echo $?) {
+    Write-Host &quot;WSL is installed.&quot;
+} else {
+    Write-Host &quot;WSL is not installed.&quot;
+    exit 1
+}
                 </code>
             </pre>
         </div>
