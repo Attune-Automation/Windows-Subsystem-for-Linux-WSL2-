@@ -17,6 +17,10 @@
         {
             "order": 200, 
             "stepKey": "installgenisoimageonwsl2ubuntu"
+        }, 
+        {
+            "order": 250, 
+            "stepKey": "installp7zipfullonwsl2ubuntu"
         }
     ], 
     "name": "Install WSL2 Prerequisites for WSL2 Ubuntu", 
