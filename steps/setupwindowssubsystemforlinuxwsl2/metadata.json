@@ -8,7 +8,7 @@
     "links": [
         {
             "order": 0, 
-            "stepKey": "installwsl2withdebian"
+            "stepKey": "installwsl2withubuntu"
         }, 
         {
             "order": 50, 
@@ -16,7 +16,23 @@
         }, 
         {
             "order": 100, 
-            "stepKey": "verifywslisinstalled"
+            "stepKey": "verifywsl2isinstalled"
+        }, 
+        {
+            "order": 150, 
+            "stepKey": "startwsl2ubuntu"
+        }, 
+        {
+            "order": 200, 
+            "stepKey": "setwsl2defualtubuntu"
+        }, 
+        {
+            "order": 250, 
+            "stepKey": "setwsl2standarduser"
+        }, 
+        {
+            "order": 300, 
+            "stepKey": "installwsl2prerequisitesforwsl2ubuntu"
         }
     ], 
     "name": "Setup Windows Subsystem for Linux (WSL2)", 

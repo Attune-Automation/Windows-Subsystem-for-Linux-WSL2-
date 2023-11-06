@@ -1,0 +1,16 @@
+{
+    "actionOnStepFail": "stop", 
+    "enabled": true, 
+    "externalUuid4": "02cb2e3f-bc8d-42ab-baa4-f7a78b3d7ac3", 
+    "interpreter": 2, 
+    "interpreterCommand": "", 
+    "interpreterScriptExt": null, 
+    "interpreterScriptSyntax": "", 
+    "key": "fullupgradeonwsl2ubuntu", 
+    "name": "Full Upgrade on WSL2 Ubuntu", 
+    "osCredKey": "automationworkerwindowsuseradministrator", 
+    "serverKey": "automationworkerwindowsnode", 
+    "successExitCode": 0, 
+    "timeout": 3600, 
+    "type": "com.servertribe.attune.tuples.StepWinRmTuple"
+}

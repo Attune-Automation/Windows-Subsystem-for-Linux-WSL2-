@@ -1,0 +1,1 @@
+wsl -d Ubuntu --user root --exec apt-get -y upgrade

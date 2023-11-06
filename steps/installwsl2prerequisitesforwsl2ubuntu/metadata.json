@@ -1,0 +1,24 @@
+{
+    "actionOnStepFail": "stop", 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "07ec85d2-095d-46fb-9704-9bcbfcb3ba71", 
+    "isBlueprint": false, 
+    "key": "installwsl2prerequisitesforwsl2ubuntu", 
+    "links": [
+        {
+            "order": 100, 
+            "stepKey": "updateonwsl2ubuntu"
+        }, 
+        {
+            "order": 150, 
+            "stepKey": "fullupgradeonwsl2ubuntu"
+        }, 
+        {
+            "order": 200, 
+            "stepKey": "installgenisoimageonwsl2ubuntu"
+        }
+    ], 
+    "name": "Install WSL2 Prerequisites for WSL2 Ubuntu", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

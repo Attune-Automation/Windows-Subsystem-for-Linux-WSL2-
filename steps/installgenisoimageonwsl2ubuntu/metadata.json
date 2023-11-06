@@ -1,0 +1,16 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "d56f8bdc-d59a-4171-bef4-be10d12ecde1", 
+    "interpreter": 2, 
+    "interpreterCommand": "", 
+    "interpreterScriptExt": null, 
+    "interpreterScriptSyntax": "", 
+    "key": "installgenisoimageonwsl2ubuntu", 
+    "name": "Install genisoimage on WSL2 Ubuntu", 
+    "osCredKey": "automationworkerwindowsuseradministrator", 
+    "serverKey": "automationworkerwindowsnode", 
+    "successExitCode": 0, 
+    "timeout": 3600, 
+    "type": "com.servertribe.attune.tuples.StepWinRmTuple"
+}
