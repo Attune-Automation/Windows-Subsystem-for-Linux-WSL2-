@@ -70,6 +70,7 @@ This blueprint will check for the Windows operating system version and will inst
 | ---- | ---- | ---------------- | ------- |
 | Automation Worker Windows Node | Windows Node | `automationworkerwindowsnode` | The Windows automation worker node used to perform tasks to create the ISO. |
 | Automation Worker Windows User: Administrator | Windows Credential | `automationworkerwindowsuseradministrator` | Administrator user on the Windows Automation Worker node. |
+| WSL2 Automation Worker Linux User | Linux/Unix Credential | `wsl2automationworkerlinuxuser` | Non privilege user on the WSL2 Automation Worker node. |
 
 
 

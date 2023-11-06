@@ -5,7 +5,7 @@ $WIN2022_STRING = "Windows Server 2022"
 
 $ERROR_STRING = "Please use Windows Desktop 10 or Windows Server 2022 for WSL2."
 
-$LINUX_DISTRIBUTION = "Debian"
+$LINUX_DISTRIBUTION = "Ubuntu"
 
 if ((systeminfo | select-string -pattern $WIN10_STRING)) {
     # Win10

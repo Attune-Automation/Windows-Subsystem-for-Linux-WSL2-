@@ -1,0 +1,2 @@
+wsl -d Ubuntu --user root --exec useradd --create-home $(openssl passwd -1 "{wsl2AutomationWorkerLinuxUser.password}") {wsl2AutomationWorkerLinuxUser.user}
+

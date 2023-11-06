@@ -1,0 +1,7 @@
+{
+    "externalUuid4": "673a268e-2d24-422c-b333-f14aa4e651ce", 
+    "key": "wsl2automationworkerlinuxuser", 
+    "name": "WSL2 Automation Worker Linux User", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.LinOsCred"
+}

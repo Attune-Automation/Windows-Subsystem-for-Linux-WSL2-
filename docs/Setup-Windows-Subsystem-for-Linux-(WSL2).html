@@ -220,8 +220,8 @@ This blueprint will check for the Windows operating system version and will inst
         
 
                     <p class="text-muted pt-2">
-                        <a href="#installwsl2withdebian">
-                            <strong>Step 1 -</strong> Install WSL2 with Debian
+                        <a href="#installwsl2withubuntu">
+                            <strong>Step 1 -</strong> Install WSL2 with Ubuntu
                         </a>
                     </p>
 
@@ -236,10 +236,67 @@ This blueprint will check for the Windows operating system version and will inst
         
 
                     <p class="text-muted pt-2">
-                        <a href="#verifywslisinstalled">
-                            <strong>Step 3 -</strong> Verify WSL is Installed
+                        <a href="#verifywsl2isinstalled">
+                            <strong>Step 3 -</strong> Verify WSL2 is Installed
                         </a>
                     </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#startwsl2ubuntu">
+                            <strong>Step 4 -</strong> Start WSL2 Ubuntu
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#setwsl2defualtubuntu">
+                            <strong>Step 5 -</strong> Set WSL2 Defualt Ubuntu
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#setwsl2standarduser">
+                            <strong>Step 6 -</strong> Set WSL2 Standard User
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#installwsl2prerequisitesforwsl2ubuntu">
+                            <strong>Step 7 -</strong> Install WSL2 Prerequisites for WSL2 Ubuntu
+                        </a>
+                    </p>
+    
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#updateonwsl2ubuntu">
+                            <strong>Step 7.1 -</strong> Update on WSL2 Ubuntu
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#fullupgradeonwsl2ubuntu">
+                            <strong>Step 7.2 -</strong> Full Upgrade on WSL2 Ubuntu
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#installgenisoimageonwsl2ubuntu">
+                            <strong>Step 7.3 -</strong> Install genisoimage on WSL2 Ubuntu
+                        </a>
+                    </p>
+
 
 
                 </div>
@@ -331,9 +388,9 @@ This blueprint will check for the Windows operating system version and will inst
 
 
                     <div class="row pt-5">
-                        <h3 id="installwsl2withdebian">
-                            <a href="#installwsl2withdebian">
-                                <strong>Step 1 -</strong> Install WSL2 with Debian
+                        <h3 id="installwsl2withubuntu">
+                            <a href="#installwsl2withubuntu">
+                                <strong>Step 1 -</strong> Install WSL2 with Ubuntu
                             </a>
                         </h3>
                     </div>
@@ -413,7 +470,7 @@ $WIN2022_STRING = &quot;Windows Server 2022&quot;
 
 $ERROR_STRING = &quot;Please use Windows Desktop 10 or Windows Server 2022 for WSL2.&quot;
 
-$LINUX_DISTRIBUTION = &quot;Debian&quot;
+$LINUX_DISTRIBUTION = &quot;Ubuntu&quot;
 
 if ((systeminfo | select-string -pattern $WIN10_STRING)) {
     # Win10
@@ -482,9 +539,9 @@ if ((systeminfo | select-string -pattern $WIN10_STRING)) {
 
 
                     <div class="row pt-5">
-                        <h3 id="verifywslisinstalled">
-                            <a href="#verifywslisinstalled">
-                                <strong>Step 3 -</strong> Verify WSL is Installed
+                        <h3 id="verifywsl2isinstalled">
+                            <a href="#verifywsl2isinstalled">
+                                <strong>Step 3 -</strong> Verify WSL2 is Installed
                             </a>
                         </h3>
                     </div>
@@ -533,6 +590,339 @@ if (echo $?) {
             </pre>
         </div>
     </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="startwsl2ubuntu">
+                            <a href="#startwsl2ubuntu">
+                                <strong>Step 4 -</strong> Start WSL2 Ubuntu
+                            </a>
+                        </h3>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+wsl --install -d Ubuntu
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="setwsl2defualtubuntu">
+                            <a href="#setwsl2defualtubuntu">
+                                <strong>Step 5 -</strong> Set WSL2 Defualt Ubuntu
+                            </a>
+                        </h3>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+wsl --set-default Ubuntu
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="setwsl2standarduser">
+                            <a href="#setwsl2standarduser">
+                                <strong>Step 6 -</strong> Set WSL2 Standard User
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>https://askubuntu.com/questions/80444/how-to-set-user-passwords-using-passwd-without-a-prompt</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+wsl -d Ubuntu --user root --exec useradd --create-home $(openssl passwd -1 &quot;{wsl2AutomationWorkerLinuxUser.password}&quot;) {wsl2AutomationWorkerLinuxUser.user}
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="installwsl2prerequisitesforwsl2ubuntu">
+                            <a href="#installwsl2prerequisitesforwsl2ubuntu">
+                                <strong>Step 7 -</strong> Install WSL2 Prerequisites for WSL2 Ubuntu
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="updateonwsl2ubuntu">
+                            <a href="#updateonwsl2ubuntu">
+                                <strong>Step 7.1 -</strong> Update on WSL2 Ubuntu
+                            </a>
+                        </h4>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+wsl -d Ubuntu --user root --exec apt-get update
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="fullupgradeonwsl2ubuntu">
+                            <a href="#fullupgradeonwsl2ubuntu">
+                                <strong>Step 7.2 -</strong> Full Upgrade on WSL2 Ubuntu
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+wsl -d Ubuntu --user root --exec apt-get -y upgrade
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="installgenisoimageonwsl2ubuntu">
+                            <a href="#installgenisoimageonwsl2ubuntu">
+                                <strong>Step 7.3 -</strong> Install genisoimage on WSL2 Ubuntu
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+wsl -d Ubuntu  --user root --exec apt-get -y install genisoimage
+                </code>
+            </pre>
+        </div>
+    </div>
+
 
 
 
