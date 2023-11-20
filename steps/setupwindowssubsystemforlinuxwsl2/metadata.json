@@ -12,26 +12,26 @@
         }, 
         {
             "order": 50, 
-            "stepKey": "winrebootlink"
-        }, 
-        {
-            "order": 100, 
-            "stepKey": "verifywsl2isinstalled"
+            "stepKey": "winreboot"
         }, 
         {
             "order": 150, 
-            "stepKey": "startwsl2ubuntu"
+            "stepKey": "verifywsl2isinstalled"
         }, 
         {
             "order": 200, 
-            "stepKey": "setwsl2defualtubuntu"
+            "stepKey": "startwsl2ubuntu"
         }, 
         {
             "order": 250, 
-            "stepKey": "setwsl2standarduser"
+            "stepKey": "setwsl2defualtubuntu"
         }, 
         {
             "order": 300, 
+            "stepKey": "setwsl2standarduser"
+        }, 
+        {
+            "order": 350, 
             "stepKey": "installwsl2prerequisitesforwsl2ubuntu"
         }
     ], 

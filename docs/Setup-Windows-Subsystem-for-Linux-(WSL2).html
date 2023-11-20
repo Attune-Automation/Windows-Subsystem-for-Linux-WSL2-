@@ -228,10 +228,27 @@ This blueprint will check for the Windows operating system version and will inst
         
 
                     <p class="text-muted pt-2">
-                        <a href="#winrebootlink">
-                            <strong>Step 2 -</strong> WIN Reboot (link)
+                        <a href="#winreboot">
+                            <strong>Step 2 -</strong> WIN Reboot
                         </a>
                     </p>
+    
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#winschedulereboot">
+                            <strong>Step 2.1 -</strong> WIN Schedule Reboot
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#winrebootwait">
+                            <strong>Step 2.2 -</strong> WIN Reboot Wait
+                        </a>
+                    </p>
+
 
         
 
@@ -516,17 +533,39 @@ if ((systeminfo | select-string -pattern $WIN10_STRING)) {
 
 
                     <div class="row pt-5">
-                        <h3 id="winrebootlink">
-                            <a href="#winrebootlink">
-                                <strong>Step 2 -</strong> WIN Reboot (link)
+                        <h3 id="winreboot">
+                            <a href="#winreboot">
+                                <strong>Step 2 -</strong> WIN Reboot
                             </a>
                         </h3>
+                    </div>
+
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="winschedulereboot">
+                            <a href="#winschedulereboot">
+                                <strong>Step 2.1 -</strong> WIN Schedule Reboot
+                            </a>
+                        </h4>
                     </div>
 
                     <div class="row">
                         <div class="description col px-0">
                             <p>
-                                
+                                <p>Reboots Windows in 10 seconds.</p>
                             </p>
                         </div>
                     </div>
@@ -536,7 +575,81 @@ if ((systeminfo | select-string -pattern $WIN10_STRING)) {
 
 
 
+
+
+
     
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+$WAIT = 10
+shutdown /r /t $WAIT /c &quot;Restart from Attune&quot;
+Write-Host &quot;Restarting in $WAIT seconds.&quot;
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="winrebootwait">
+                            <a href="#winrebootwait">
+                                <strong>Step 2.2 -</strong> WIN Reboot Wait
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>Waits until WinRM becomes available on port <code>5986</code>.</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <div class="row">
+        <p class="mb-0">
+            Check if TCP Port <strong>0</strong> is listening.
+            Make sure the TCP Port goes down for
+            <strong>1</strong> seconds.
+            When the TCP Port is up, wait <strong>15</strong>
+            seconds.
+        </p>
+        <p>Use Telnet to check if the TCP Service is accepting connections.</p>
+    </div>
+
 
 
 
@@ -570,7 +683,24 @@ if ((systeminfo | select-string -pattern $WIN10_STRING)) {
 
 
 
-    
+
+                        <div class="row">
+                            <p>
+                                Connect via RDP:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+mstsc /admin /v:{automationworkerwindowsnode}
+                            </code>
+                        </div>
+                        <div class="row">
+                            <p>
+                                Login as user {automationworkerwindowsuseradministrator} and open a
+                                command prompt.
+                            </p>
+                        </div>
+
 
 
     
@@ -615,6 +745,13 @@ if (echo $?) {
                         </h3>
                     </div>
 
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
 
 
 
@@ -662,6 +799,13 @@ wsl --install -d Ubuntu
                         </h3>
                     </div>
 
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
 
 
 
@@ -792,6 +936,13 @@ wsl -d Ubuntu --user root --exec useradd --create-home $(openssl passwd -1 &quot
                         </h4>
                     </div>
 
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
 
 
 
@@ -947,6 +1098,13 @@ wsl -d Ubuntu  --user root --exec apt-get -y install genisoimage
                         </h4>
                     </div>
 
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
 
 
 

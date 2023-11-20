@@ -1,0 +1,20 @@
+{
+    "actionOnStepFail": "stop", 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "217c749c-ff45-493c-a23b-7cd4ea56c1b5", 
+    "isBlueprint": false, 
+    "key": "winreboot", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "winschedulereboot"
+        }, 
+        {
+            "order": 50, 
+            "stepKey": "winrebootwait"
+        }
+    ], 
+    "name": "WIN Reboot", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

@@ -1,0 +1,13 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "962d3490-d576-4b4c-9657-1dff2e72461e", 
+    "key": "winrebootwait", 
+    "minDowntime": 1, 
+    "name": "WIN Reboot Wait", 
+    "postWait": 15, 
+    "preWait": 0, 
+    "serverKey": "automationworkerwindowsnode", 
+    "tcpPort": 5986, 
+    "type": "com.servertribe.attune.tuples.StepTcpPingTuple"
+}

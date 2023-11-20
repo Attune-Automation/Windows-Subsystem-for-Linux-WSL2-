@@ -1,0 +1,1 @@
+Reboots Windows in 10 seconds.
