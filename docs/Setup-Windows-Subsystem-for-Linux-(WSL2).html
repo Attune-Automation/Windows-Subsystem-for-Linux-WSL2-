@@ -277,16 +277,8 @@ This blueprint will check for the Windows operating system version and will inst
         
 
                     <p class="text-muted pt-2">
-                        <a href="#setwsl2standarduser">
-                            <strong>Step 6 -</strong> Set WSL2 Standard User
-                        </a>
-                    </p>
-
-        
-
-                    <p class="text-muted pt-2">
                         <a href="#installwsl2prerequisitesforwsl2ubuntu">
-                            <strong>Step 7 -</strong> Install WSL2 Prerequisites for WSL2 Ubuntu
+                            <strong>Step 6 -</strong> Install WSL2 Prerequisites for WSL2 Ubuntu
                         </a>
                     </p>
     
@@ -294,7 +286,7 @@ This blueprint will check for the Windows operating system version and will inst
 
                     <p class="text-muted pt-2">
                         <a href="#updateonwsl2ubuntu">
-                            <strong>Step 7.1 -</strong> Update on WSL2 Ubuntu
+                            <strong>Step 6.1 -</strong> Update on WSL2 Ubuntu
                         </a>
                     </p>
 
@@ -302,7 +294,7 @@ This blueprint will check for the Windows operating system version and will inst
 
                     <p class="text-muted pt-2">
                         <a href="#fullupgradeonwsl2ubuntu">
-                            <strong>Step 7.2 -</strong> Full Upgrade on WSL2 Ubuntu
+                            <strong>Step 6.2 -</strong> Full Upgrade on WSL2 Ubuntu
                         </a>
                     </p>
 
@@ -310,7 +302,7 @@ This blueprint will check for the Windows operating system version and will inst
 
                     <p class="text-muted pt-2">
                         <a href="#installgenisoimageonwsl2ubuntu">
-                            <strong>Step 7.3 -</strong> Install genisoimage on WSL2 Ubuntu
+                            <strong>Step 6.3 -</strong> Install genisoimage on WSL2 Ubuntu
                         </a>
                     </p>
 
@@ -318,7 +310,7 @@ This blueprint will check for the Windows operating system version and will inst
 
                     <p class="text-muted pt-2">
                         <a href="#installp7zipfullonwsl2ubuntu">
-                            <strong>Step 7.4 -</strong> Install p7zip-full on WSL2 Ubuntu
+                            <strong>Step 6.4 -</strong> Install p7zip-full on WSL2 Ubuntu
                         </a>
                     </p>
 
@@ -846,63 +838,9 @@ wsl --set-default Ubuntu
 
 
                     <div class="row pt-5">
-                        <h3 id="setwsl2standarduser">
-                            <a href="#setwsl2standarduser">
-                                <strong>Step 6 -</strong> Set WSL2 Standard User
-                            </a>
-                        </h3>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>https://askubuntu.com/questions/80444/how-to-set-user-passwords-using-passwd-without-a-prompt</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-wsl -d Ubuntu --user root --exec useradd --create-home $(openssl passwd -1 &quot;{wsl2AutomationWorkerLinuxUser.password}&quot;) {wsl2AutomationWorkerLinuxUser.user}
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-        
-
-
-
-                    <div class="row pt-5">
                         <h3 id="installwsl2prerequisitesforwsl2ubuntu">
                             <a href="#installwsl2prerequisitesforwsl2ubuntu">
-                                <strong>Step 7 -</strong> Install WSL2 Prerequisites for WSL2 Ubuntu
+                                <strong>Step 6 -</strong> Install WSL2 Prerequisites for WSL2 Ubuntu
                             </a>
                         </h3>
                     </div>
@@ -931,7 +869,7 @@ wsl -d Ubuntu --user root --exec useradd --create-home $(openssl passwd -1 &quot
                     <div class="row pt-5">
                         <h4 id="updateonwsl2ubuntu">
                             <a href="#updateonwsl2ubuntu">
-                                <strong>Step 7.1 -</strong> Update on WSL2 Ubuntu
+                                <strong>Step 6.1 -</strong> Update on WSL2 Ubuntu
                             </a>
                         </h4>
                     </div>
@@ -985,7 +923,7 @@ wsl -d Ubuntu --user root --exec apt-get update
                     <div class="row pt-5">
                         <h4 id="fullupgradeonwsl2ubuntu">
                             <a href="#fullupgradeonwsl2ubuntu">
-                                <strong>Step 7.2 -</strong> Full Upgrade on WSL2 Ubuntu
+                                <strong>Step 6.2 -</strong> Full Upgrade on WSL2 Ubuntu
                             </a>
                         </h4>
                     </div>
@@ -1039,7 +977,7 @@ wsl -d Ubuntu --user root --exec apt-get -y upgrade
                     <div class="row pt-5">
                         <h4 id="installgenisoimageonwsl2ubuntu">
                             <a href="#installgenisoimageonwsl2ubuntu">
-                                <strong>Step 7.3 -</strong> Install genisoimage on WSL2 Ubuntu
+                                <strong>Step 6.3 -</strong> Install genisoimage on WSL2 Ubuntu
                             </a>
                         </h4>
                     </div>
@@ -1093,7 +1031,7 @@ wsl -d Ubuntu  --user root --exec apt-get -y install genisoimage
                     <div class="row pt-5">
                         <h4 id="installp7zipfullonwsl2ubuntu">
                             <a href="#installp7zipfullonwsl2ubuntu">
-                                <strong>Step 7.4 -</strong> Install p7zip-full on WSL2 Ubuntu
+                                <strong>Step 6.4 -</strong> Install p7zip-full on WSL2 Ubuntu
                             </a>
                         </h4>
                     </div>

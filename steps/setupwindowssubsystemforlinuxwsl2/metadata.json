@@ -27,10 +27,6 @@
             "stepKey": "setwsl2defualtubuntu"
         }, 
         {
-            "order": 300, 
-            "stepKey": "setwsl2standarduser"
-        }, 
-        {
             "order": 350, 
             "stepKey": "installwsl2prerequisitesforwsl2ubuntu"
         }
