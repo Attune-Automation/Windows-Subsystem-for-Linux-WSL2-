@@ -314,6 +314,14 @@ This blueprint will check for the Windows operating system version and will inst
                         </a>
                     </p>
 
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#installwimlibonwsl2ubuntu">
+                            <strong>Step 6.5 -</strong> Install wimlib on WSL2 Ubuntu
+                        </a>
+                    </p>
+
 
 
                 </div>
@@ -532,6 +540,13 @@ if ((systeminfo | select-string -pattern $WIN10_STRING)) {
                         </h3>
                     </div>
 
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
 
 
 
@@ -1069,6 +1084,60 @@ wsl -d Ubuntu  --user root --exec apt-get -y install genisoimage
             <pre>
                 <code class="language-sql py-0">
 wsl -d Ubuntu  --user root --exec apt-get -y install p7zip-full
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="installwimlibonwsl2ubuntu">
+                            <a href="#installwimlibonwsl2ubuntu">
+                                <strong>Step 6.5 -</strong> Install wimlib on WSL2 Ubuntu
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+wsl -d Ubuntu  --user root --exec apt-get -y install libwim15 wimtools
                 </code>
             </pre>
         </div>

@@ -21,6 +21,10 @@
         {
             "order": 250, 
             "stepKey": "installp7zipfullonwsl2ubuntu"
+        }, 
+        {
+            "order": 300, 
+            "stepKey": "installwimlibonwsl2ubuntu"
         }
     ], 
     "name": "Install WSL2 Prerequisites for WSL2 Ubuntu", 
