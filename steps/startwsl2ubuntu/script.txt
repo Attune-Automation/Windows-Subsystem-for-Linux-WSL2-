@@ -1,1 +1,1 @@
-wsl --install -d Ubuntu
+wsl --install -d ubuntu

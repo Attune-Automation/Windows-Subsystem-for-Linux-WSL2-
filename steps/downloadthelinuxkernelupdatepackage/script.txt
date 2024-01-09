@@ -1,0 +1,27 @@
+# Install wsl
+$FOLDER="C:\attuneautomationworker\wsl"
+
+if (-not (Test-Path -Path $FOLDER)) {
+    New-Item -ItemType Directory -Path $FOLDER
+}
+
+Set-Location $FOLDER
+
+$URL="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi"
+$FILE="wsl_update_x64.msi"
+
+Write-Host "Downloading from ${URL}"
+Invoke-WebRequest `
+    -Uri "${URL}" `
+    -OutFile "${FILE}"
+
+if (Test-Path -Path ".\*" -Include "*.msi") {
+    $WSL_FILE = (dir *.msi).name
+    
+    Write-Host "Installing from $WSL_FILE"
+    
+    Start-Process msiexec.exe "/qn /i $WSL_FILE" -Wait
+    
+} else {
+    Write-Error "No .msi file found"
+}

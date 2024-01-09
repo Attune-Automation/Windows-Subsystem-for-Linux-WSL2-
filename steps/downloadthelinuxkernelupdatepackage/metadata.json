@@ -1,0 +1,16 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "d5abf91d-0ab4-4c64-8b1f-c564f2e87277", 
+    "interpreter": 2, 
+    "interpreterCommand": "", 
+    "interpreterScriptExt": null, 
+    "interpreterScriptSyntax": "", 
+    "key": "downloadthelinuxkernelupdatepackage", 
+    "name": "Download the Linux kernel update package", 
+    "osCredKey": "automationworkerwindowsuseradministrator", 
+    "serverKey": "automationworkerwindowsnode", 
+    "successExitCode": 0, 
+    "timeout": 240, 
+    "type": "com.servertribe.attune.tuples.StepWinRmTuple"
+}
